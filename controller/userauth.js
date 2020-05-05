@@ -7,7 +7,7 @@ exports.signUp = (req, res, next) => {
 
   const password = req.body.password;
 
-  if (!email || !password) {
+  if (!email || !password || !role) {
     res.status(400).send({
       status: false,
 
