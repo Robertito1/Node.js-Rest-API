@@ -1,11 +1,9 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const authUser = require("./router/userauth");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(authUser);
 
 mongoose
   .connect(
