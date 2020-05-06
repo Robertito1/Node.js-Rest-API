@@ -9,8 +9,8 @@ app.use(authTutor);
 
 mongoose
   .connect(
-    "mongodb+srv://Robertito1:Titoroti777@cluster0-rnhzs.mongodb.net/test?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    "mongodb+srv://Robertito1:Titoroti777@cluster0-rnhzs.mongodb.net/test?retryWrites=true&w=majority"
+    // { useNewUrlParser: true, useUnifiedTopology: true }
   )
 
   .then((result) => {
