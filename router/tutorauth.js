@@ -1,0 +1,10 @@
+const router = require("express").Router();
+const { tutorsignUp, tutorlogIn } = require("../controllers/tutorauth");
+
+router.get("/", (req, res) => {
+  res.send("This is the express app .you have now entered express");
+});
+router.post("/signup/tutor", tutorsignUp);
+router.post("/login/tutor", tutorlogIn);
+
+module.exports = router;
