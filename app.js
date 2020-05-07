@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const authTutor = require("./router/tutorauth");
+const auth = require("./router/auth");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(authTutor);
+app.use("/signup", auth);
+app.use("/login", auth);
 
 mongoose
   .connect(
