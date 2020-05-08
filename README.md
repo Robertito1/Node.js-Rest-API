@@ -1,7 +1,7 @@
 # Node.js-Rest-API
 
-currently in progress 
-working endpoints include
+currently in progress .
+Working endpoints include
 signup/tutor
 signup/student
 login/tutor
