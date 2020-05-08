@@ -15,6 +15,9 @@ mongoose
   )
 
   .then((result) => {
+    result.send(
+      "append your role eg '/tutor' to the endpoint and make a post request"
+    );
     console.log("database connected");
     const port = process.env.PORT || 3000;
     app.listen(port);

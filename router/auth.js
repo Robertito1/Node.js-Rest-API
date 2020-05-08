@@ -5,7 +5,9 @@ const { createCategory } = require("../controller/categorie");
 const verifyToken = require("../middleware");
 
 router.get("/", (req, res) => {
-  res.send("This is the express app .you have now entered express");
+  res.send(
+    "append your role eg '/tutor' to the endpoint and make a post request"
+  );
 });
 router.post("/tutor", tutorsignUp);
 router.post("/tutor", tutorlogIn);
