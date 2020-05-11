@@ -68,7 +68,7 @@ exports.studentlogIn = (req, res, next) => {
           .send("Student not found, please provide valid credentials");
       }
 
-      bcrypt.compare(password, user.password).then((valid) => {
+      bcrypt.compare(password, student.password).then((valid) => {
         if (!valid) {
           return res
 
@@ -80,7 +80,7 @@ exports.studentlogIn = (req, res, next) => {
         }
 
         const token = jwt.sign(
-          { email: user.email, _id: user._id },
+          { email: student.email, _id: student._id },
 
           "somesecretkey",
 
@@ -88,7 +88,7 @@ exports.studentlogIn = (req, res, next) => {
         );
 
         res.status(200).send({
-          _id: user._id,
+          _id: student._id,
 
           token,
         });
