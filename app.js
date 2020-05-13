@@ -4,12 +4,13 @@ const mongoose = require("mongoose");
 const login = require("./router/login");
 const signup = require("./router/signup");
 const level = require("./router/category");
+const jwt = require("jsonwebtoken");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/signup", signup);
 app.use("/login", login);
-app.use("/category", level);
+app.use("/categories", level);
 app.get("/", (req, res) => {
   res.send("this is home");
 });
