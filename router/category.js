@@ -3,13 +3,13 @@ const {
   createCategory,
   findCategory,
   getCategories,
-  deleteCategory,
+  // deleteCategory,
 } = require("../controller/category");
-const { verifyToken } = require("../middleware");
+// const { verifyToken } = require("../middleware");
 
-router.post("/", verifyToken, createCategory);
+router.post("/", createCategory);
 router.get("/", getCategories);
 router.get("/:id", findCategory);
-router.delete("/:id", deleteCategory);
+// router.delete("/:id", deleteCategory);
 
 module.exports = router;

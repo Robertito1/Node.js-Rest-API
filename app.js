@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const login = require("./router/login");
 const signup = require("./router/signup");
 const level = require("./router/category");
-const jwt = require("jsonwebtoken");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
