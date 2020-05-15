@@ -54,23 +54,10 @@ exports.findCategory = (req, res, next) => {
 
     .catch((err) => console.log(err));
 };
-//   const category = Category.findById(req.params.id)
-//     .then((category) => {
-//       if (!category) {
-//         return res
 
-//           .status(423)
+exports.deleteCategory = (req, res, next) => {
+  const deleted = Category.remove({ _id: req.params.id })
+    .then(() => res.status(200).send(deleted))
 
-//           .send("Category not found");
-//       }
-//     })
-//     .then(() => res.status(200).send(category))
-
-//     .catch((err) => console.log(err));
-// };
-// exports.deleteCategory = (req, res, next) => {
-//   const deleted = Category.remove({ _id: req.params.id })
-//     .then(() => res.status(200).send())
-
-//     .catch((err) => console.log(err));
-// };
+    .catch((err) => console.log(err));
+};

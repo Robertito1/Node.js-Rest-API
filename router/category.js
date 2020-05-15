@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const {
   createCategory,
-  findCategory,
+
   getCategories,
+  findCategory,
   // deleteCategory,
 } = require("../controller/category");
 // const { verifyToken } = require("../middleware");

@@ -6,7 +6,12 @@ signup/tutor
 signup/student
 login/tutor
 login/student
+/categories
 
-sign up details to be provided include name, email, password respectively
+sign up details to be provided include
+name,
+email,
+password ---respectively
 
-app is hosted on heroku with the domain name https://node-school-rest-api.herokuapp.com/ home page has no display message so it says cannot/GET however the signup/ has a message. and you can make post requests to the appended endpoints.
+app is hosted on heroku with the domain name https://node-school-rest-api.herokuapp.com/ home page displays 'this is home' message. and you can make post requests to the appended endpoints.
+get request can also be made to categories.
